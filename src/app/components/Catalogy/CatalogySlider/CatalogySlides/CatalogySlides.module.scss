@@ -1,0 +1,149 @@
+.catalogySlides {
+  width: 100%;
+  &__img {
+    height: 523px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--fours-text-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    background-color: var(--fours-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 70px;
+    & > img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  &__info {
+    height: 192px;
+    background-color: var(--main-text-color);
+    width: 100%;
+    padding: 25px 70px 50px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--fours-text-color);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+  }
+  &__infoBox {
+    &:first-child {
+      color: #524c4c;
+      font-size: 48px;
+    }
+    &:last-child {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      font-size: 32px;
+      color: #524c4c;
+      font-weight: 200;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    display: block;
+  }
+  &__descr {
+    color: #949494;
+  }
+  &__price {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 1;
+  }
+  &__rating {
+    display: flex;
+    justify-content: end;
+  }
+  &__button {
+    display: block;
+    width: 730px;
+    height: 125px;
+    background-color: var(--main-color);
+    border-radius: 48px;
+    border: none;
+    font-size: 64px;
+    color: var(--main-text-color);
+    margin: 27px auto 200px;
+    transition: 0.2s;
+    &:hover {
+      cursor: pointer;
+      border: 2px solid var(--main-color);
+      background-color: inherit;
+      color: var(--main-color);
+    }
+  }
+  &__controls {
+    position: relative;
+    text-align: center;
+  }
+  &__prevButton,
+  &__nextButton {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    border: none;
+    background-color: inherit;
+    position: absolute;
+    transition:
+      scale 0.1s ease,
+      opacity 0.2s ease;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+    &:active {
+      scale: 1.2;
+    }
+  }
+  &__prevButton {
+    top: -100px;
+    left: 0;
+    &:after {
+      content: url("../../../../../../public/leftArrowSlider.png");
+    }
+  }
+  &__nextButton {
+    top: -100px;
+    right: 0;
+    &::after {
+      content: url("../../../../../../public/rightArrowSlider.png");
+    }
+  }
+}
+
+.ammount {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  &__delButton,
+  &__addButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    font-size: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      scale: 1.1;
+    }
+  }
+  &__delButton {
+    margin-right: 5px;
+  }
+  &__addButton {
+    margin-left: 5px;
+  }
+  &__number {
+    font-size: 40px;
+  }
+}
